@@ -9,7 +9,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pigra",
-    version="1.0.0",
+    version="1.0.1",
     description="A Python IGRA v2 parser",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -25,7 +25,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.8"
     ],
-    packages=["pigra"],
+    packages=setuptools.find_packages(),
     include_package_data=True,
     install_requires=[],
     python_requires=">=3.8"

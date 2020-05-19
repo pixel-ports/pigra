@@ -1,6 +1,6 @@
 # pigra
 
-[![PyPI Latest Release](https://img.shields.io/pigra/v/pigra)](https://pypi.org/project/pigra/)
+[![PyPI Latest Release](https://img.shields.io/pypi/v/pigra)](https://pypi.org/project/pigra/)
 [![License badge](https://img.shields.io/github/license/pixel-ports/pigra)](https://opensource.org/licenses/Apache-2.0)
 [![Python version](https://img.shields.io/pypi/pyversions/pigra)](https://pypi.org/project/pigra/)
 
