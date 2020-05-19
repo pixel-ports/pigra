@@ -1,28 +1,44 @@
-The Python IGRAv2 parsing library
-=================================
+# pigra
 
-**pigra** 
+[![PyPI Latest Release](https://img.shields.io/pigra/v/pigra)](https://pypi.org/project/pigra/)
+[![License badge](https://img.shields.io/github/license/pixel-ports/pigra)](https://opensource.org/licenses/Apache-2.0)
+[![Python version](https://img.shields.io/pypi/pyversions/pigra)](https://pypi.org/project/pigra/)
+
+## What is it ?
+
+A Python parsing library for the IGRA v2 format.
+
+## Key Features
+
 - parses IGRA data according to the [IGRAv2 specifications](ftp://ftp.ncdc.noaa.gov/pub/data/igra/data/igra2-data-format.txt)
 - defines a clean Sounding data-structure easy to work with
 - processes records on the fly without storing the whole archive in memory
 - allows to filter soundings by providing your own function (including geoboxing)
-- handles output to json format or human-readable headers
+- outputs to JSON format and human-readable headers
 - computes statistics
+- no dependencies
 - unit-tested
 
-License
---------
+## Where to get it
+The source code is currently hosted on GitHub at :
+https://github.com/pixel-ports/pigra
 
-    Copyright (C) 2019 Orange
+Binary installer for the latest released version is available at the [Python
+package index](https://pypi.org/project/pigra).
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+```sh
+pip install pigra
+```
 
-       http://www.apache.org/licenses/LICENSE-2.0
+## License
+[Apache 2.0](LICENSE)
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+## Documentation
+Have a look at the `examples` directory.
+
+## Background
+Work on ``pigra`` started at [Orange](https://www.orange.com) in 2019 for the needs of the [PIXEL](https://pixel-ports.eu) european project.
+
+## Funding
+
+``pigra`` has been developed as part of the [PIXEL](https://pixel-ports.eu) project, H2020, funded by the EC under Grant Agreement number [769355](https://cordis.europa.eu/project/id/769355).

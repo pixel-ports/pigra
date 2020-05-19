@@ -40,7 +40,7 @@ class IgraParser:
             return s == o
 
     def __init__(self,
-                 stream: Iterable = None,
+                 stream: Iterable = sys.stdin,
                  f_match: Callable[[Sounding], bool] = lambda x: True,
                  verbose=False):
         self.stream = stream

@@ -13,8 +13,10 @@ def main():
     # parse sounding data
     parser = IgraParser(stream)
 
-    # outputs general info about parsed data : found stations, observations number and date range
-    parser.analyze()
+    # for each sounding display a human-readable header followed by the full JSON format
+    for sounding in parser.parse():
+        print(sounding.header())
+        print(sounding.to_json())
 
 
 if __name__ == '__main__':

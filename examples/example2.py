@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from shapely.geometry import shape, box, Polygon
-
 from pigra.parser import IgraParser
+from pigra.utils import stream_from
+
 
 def main():
-    poly: Polygon = box(22.0, 40.0, 23.0, 41.0) # approx geobox around Thessaloniki
 
-    parser = IgraParser(f_match=lambda x: shape(x.position).within(poly))
+    # input data from the sample file
+    stream = stream_from("ASM00094703-data.txt.zip")
 
-    for sounding in parser.parse():
-        print(sounding)
+    # parse sounding data
+    parser = IgraParser(stream)
+
+    # outputs headers of the 5 first soundings
+    parser.head()
 
 
 if __name__ == '__main__':

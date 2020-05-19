@@ -2,30 +2,31 @@
 # -*- coding: utf-8 -*-
 
 import pathlib
-from setuptools import setup, find_packages
+import setuptools
 
-# The directory containing this file
-HERE = pathlib.Path(__file__).parent
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
-# The text of the README file
-README = (HERE / "README.md").read_text()
-
-setup(
+setuptools.setup(
     name="pigra",
-    version="0.9.2",
-    description="Python IGRA parser",
-    long_description=README,
+    version="1.0.0",
+    description="A Python IGRA v2 parser",
+    long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://gitpixel.satrdlab.upv.es/orange",
+    url="https://github.com/pixel-ports/pigra",
     author="Fabien Battello",
     author_email="fabien.battello@orange.com",
     license="Apache 2.0",
     classifiers=[
-        "License :: OSI Approved :: Apache 2.0 License",
+        "License :: OSI Approved :: Apache Software License",
+        "Operating System :: OS Independent",
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.8"
     ],
     packages=["pigra"],
     include_package_data=True,
-    install_requires=[]
+    install_requires=[],
+    python_requires=">=3.8"
 )
