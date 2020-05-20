@@ -2,16 +2,12 @@
 # -*- coding: utf-8 -*-
 
 from pigra.parser import IgraParser
-from pigra.utils import stream_from
 
 
 def main():
 
-    # input data from the sample file
-    stream = stream_from("ASM00094703-data.txt.zip")
-
     # parse sounding data
-    parser = IgraParser(stream)
+    parser = IgraParser.from_file("ASM00094703-data.txt.zip")
 
     # outputs headers of the 5 first soundings
     parser.head()
