@@ -11,7 +11,8 @@ A Python parsing library for the IGRA v2 format.
 
 - parses IGRA data according to the [IGRAv2 specifications](ftp://ftp.ncdc.noaa.gov/pub/data/igra/data/igra2-data-format.txt)
 - defines a clean Sounding data-structure easy to work with
-- processes records on the fly without storing the whole archive in memory
+- streams records (don't operate the whole dataset in memory)
+- handles incoming data from standard input (default), text file and compressed file (gz/zip)
 - allows to filter soundings by providing your own function (including geoboxing)
 - outputs to JSON format and human-readable headers
 - computes statistics
@@ -27,6 +28,14 @@ package index](https://pypi.org/project/pigra).
 
 ```sh
 pip install pigra
+```
+
+## Usage
+Use it as a library from your code.<p>
+Or basically from command line.
+
+```sh
+cat igra-data.txt | python -m pigra > output.json
 ```
 
 ## License

@@ -9,7 +9,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pigra",
-    version="1.0.1",
+    version="1.0.2",
     description="A Python IGRA v2 parser",
     long_description=long_description,
     long_description_content_type="text/markdown",
