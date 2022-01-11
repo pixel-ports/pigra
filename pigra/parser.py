@@ -168,9 +168,9 @@ class IgraParser:
         if (value:=line[3:8]) in ("-8888", "-9999"):
             elapsed = None, QualityFlag(value)
         else:
-            dt = datetime.strptime(value.strip(), "%M%S")
-            elapsed = timedelta(minutes=dt.minute,
-                                seconds=dt.second), QualityFlag.PASSED
+            dt = value.replace(' ', '0')
+            elapsed = timedelta(minutes=int(dt[0:3]),
+                                seconds=int(dt[3:])), QualityFlag.PASSED
         # pressure
         if (value:=line[9:15]) == "-9999":
             value = None
